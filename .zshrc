@@ -82,5 +82,6 @@ bindkey '^e' edit-command-line
 ### Syntax highlighting (last)
 ## sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
-
-
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles-i3/ --work-tree=$HOME'
+alias vim='nvim'
+export PATH="$HOME/bin:$PATH"
