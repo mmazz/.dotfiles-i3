@@ -21,6 +21,7 @@ setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt hist_reduce_blanks
+
 ### Completion
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -32,6 +33,12 @@ _comp_options+=(globdots)
 bindkey -v
 export KEYTIMEOUT=1
 
+# Modo NORMAL (vicmd)
+bindkey -M vicmd 'h' backward-char
+bindkey -M vicmd 'j' down-line-or-history
+bindkey -M vicmd 'k' up-line-or-history
+bindkey -M vicmd 'l' forward-char
+bindkey -M vicmd 'v' visual-mode
 
 # Vim keys in completion menu
 bindkey -M menuselect 'h' vi-backward-char
@@ -54,10 +61,6 @@ bindkey -M vicmd '^[[A' history-beginning-search-backward-end
 bindkey -M vicmd '^[OA' history-beginning-search-backward-end
 bindkey -M vicmd '^[[B' history-beginning-search-forward-end
 bindkey -M vicmd '^[OB' history-beginning-search-forward-end
-
-# Mantén tus bindings para k/j en vicmd (ya los tienes, pero asegúrate)
-bindkey -M vicmd 'k' history-beginning-search-backward-end
-bindkey -M vicmd 'j' history-beginning-search-forward-end
 
 bindkey -M viins '^R' history-incremental-search-backward
 bindkey -M vicmd '/' history-incremental-search-forward
@@ -84,4 +87,7 @@ bindkey '^e' edit-command-line
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles-i3/ --work-tree=$HOME'
 alias vim='nvim'
+
+alias zathura='zathura --fork'
+
 export PATH="$HOME/bin:$PATH"
