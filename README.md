@@ -34,5 +34,6 @@ gitdotfile push -u origin main
 
 ### After:
 ```bash
+chsh -s /usr/bin/zsh
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting
 ```
