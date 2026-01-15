@@ -19,7 +19,7 @@ gitdotfile checkout
 gitdotfile config --local status.showUntrackedFiles no
 ``` 
 
-Only once:
+Configure the ssh key and only once:
 ```bash
 gitdotfile push -u origin main
 ```
