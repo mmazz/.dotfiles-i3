@@ -18,3 +18,8 @@ alias gitdotfile='/usr/bin/git --git-dir=$HOME/.dotfiles-i3/ --work-tree=$HOME'
 gitdotfile checkout
 gitdotfile config --local status.showUntrackedFiles no
 ``` 
+
+Only once:
+```bash
+gitdotfile push -u origin main
+```
