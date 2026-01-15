@@ -10,7 +10,7 @@ sudo pacman -S ttf-jetbrains-mono-nerd ttf-firacode-nerd
 sudo pacman -S xss-lock picom pavucontrol lxappearance neovim zsh luarocks curl
 sudo pacman -S zathura zathura-pdf-poppler
 sudo pacman -S unclutter nsxiv maim xclip
-sudo pacman -S lightdm lightdm-gtk-greeter
+sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 sudo systemctl enable lightdm --now
 ``` 
 - Debian
