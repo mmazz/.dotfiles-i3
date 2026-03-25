@@ -12,7 +12,8 @@ sudo pacman -S zathura zathura-pdf-poppler
 sudo pacman -S unclutter nsxiv maim xclip
 sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 sudo systemctl enable lightdm --now
-``` 
+```
+
 - Debian
 
 ## Priori installing this repository
@@ -20,11 +21,16 @@ sudo systemctl enable lightdm --now
 
 ```bash
 echo ".dotfiles-i3" >> .gitignore
-git clone --bare https://github.com/mmazz/.dotfiles-i3.git $HOME/.dotfiles-i3
+git clone --bare  git@github.com:mmazz/.dotfiles-i3.git $HOME/.dotfiles-i3
 alias gitdotfile='/usr/bin/git --git-dir=$HOME/.dotfiles-i3/ --work-tree=$HOME'
 gitdotfile checkout
 gitdotfile config --local status.showUntrackedFiles no
-``` 
+```
+
+For case with https, replace the clone with:
+```bash
+git clone --bare https://github.com/mmazz/.dotfiles-i3.git $HOME/.dotfiles-i3
+```
 
 Configure the ssh key and only once:
 ```bash

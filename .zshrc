@@ -1,11 +1,12 @@
+### Environment
+export TERM="xterm-256color"
+export COLORTERM=truecolor
 ### Colors & Prompt
-autoload -U colors && colors
+autoload -Uz colors && colors
 PS1="%B%{$fg[cyan]%}[%{$fg[cyan]%}%n%{$fg[white]%}@%{$fg[cyan]%}%M %{$fg[white]%}%~%{$fg[cyan]%}]%{%}$%b "
 ### Shell options
 stty stop undef # saca el Ctrl+s para freezar terminal
 
-### Environment
-export TERM="xterm-256color"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export LS_COLORS="di=1;34:fi=0;37:ow=1;34:tw=1;34"
 export LESS='-R' # colores para less
@@ -74,16 +75,12 @@ function zle-keymap-select {
 zle -N zle-keymap-select
 echo -ne '\e[5 q'
 
-### Edit command line in vim
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-### Aliases
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc"
-#alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-### Syntax highlighting (last)
 ## sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 alias gitdotfile='/usr/bin/git --git-dir=$HOME/.dotfiles-i3/ --work-tree=$HOME'
